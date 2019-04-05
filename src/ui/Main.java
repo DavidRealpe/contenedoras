@@ -1,6 +1,7 @@
 package ui;
 
 import model.Mercancia;
+import model.Contenedora;
 
 import java.util.Scanner;
 
@@ -10,68 +11,77 @@ import java.util.Scanner;
  	public static void main(String[] args){
  	
 
- 		/*Scanner reader = new Scanner(System.in);
+ 		Scanner reader = new Scanner(System.in);
 
  		int option;
 
- 		Mercancia m = null;
+ 		
 
-  		do{
+ 		do{
 
-	 		System.out.println("\n============================");
-	 		System.out.println("\n	BIENVENIDO");
-	 		System.out.println("\n============================");	
-	 		System.out.println("1. Por favor ingresar las dimensiones de las contenedoras:");
-	 		System.out.println("2. Say Hi.");
-	 		System.out.println("3. Say Good Morning.");
-	 		System.out.println("4. Say Bye.");
-	 		System.out.println("5. Exit");
-	 		System.out.print("Enter the option you want:");
+ 		System.out.println("\n============================");
+	 	System.out.println("\n	BIENVENIDO");
+	 	System.out.println("\n============================");
 
-	        option = Integer.parseInt(reader.nextLine());
+	 	System.out.println("Por favor introduzca las dimensiones de la contenedora 1:");
 
-	        	switch(option){
-	        		case 1: 
-	        		System.out.println("Ancho:");
-	        		String ancho = reader.nextLine();
-	        		System.out.println("Alto:");
-	        		String alto = reader.nextLine();
-	        		System.out.println("Largo:");
-	        		String largo = reader.nextLine();
-	        		
+ 			System.out.println("Ancho:");
+	        double ancho1 = reader.nextDouble();
+	        System.out.println("Alto:");
+	        double alto1 = reader.nextDouble();
+	        System.out.println("Largo:");
+	        double largo1 = reader.nextDouble();
 
-	        		m = new Contenedora(ancho, alto, largo);        		
+   		System.out.println("Por favor introduzca las dimensiones de la contenedora 2:");
+
+   			System.out.println("Ancho:");
+	        double ancho2 = reader.nextDouble();
+	        System.out.println("Alto:");
+	        double alto2 = reader.nextDouble();
+	        System.out.println("Largo:");
+	        double largo2 = reader.nextDouble();
+
+	    System.out.println("Por favor introduzca las dimensiones de la contenedora 3:");
+
+   			System.out.println("Ancho:");
+	        double ancho3 = reader.nextDouble();
+	        System.out.println("Alto:");
+	        double alto3 = reader.nextDouble();
+	        System.out.println("Largo:");
+	        double largo3 = reader.nextDouble();
+
+ 			Contenedora c1 = new Contenedora(ancho1, alto1, largo1);
+	 		Contenedora c2 = new Contenedora(ancho2, alto2, largo2);
+ 			Contenedora c3 = new Contenedora(ancho3, alto3, largo3);
+
+	        Mercancia m = new Mercancia(c1, c2, c3);
+ 		
+	 		System.out.println("Recuerde que los calculos seran hechos con los datos que usted ingreso.");
+	 		System.out.println("1. Calcular volumen.");
+	 		System.out.println("2. Calcular promedio del volumen de las tres contenedoras.");
+	 		System.out.println("3. Salir.");
+	 		System.out.print("Ingrese la opcion que desee: ");
+
+	        option = reader.nextInt();
+
+	        	switch(option){	
+	        		case 1:
+	        		System.out.println(m.volumenTotal());
 	        		break;
-	        		case 2: 
-	        			if(g!=null){
-
-	        				System.out.println("\n"+g.sayHi()+"\n");
-	        			}else{
-	        				System.out.println("Please choose the first option before this.");
-	        			}   		 		
+	        		case 2:
+	        		System.out.println("\n"+m.promedioVolumen()+"\n");
 	        		break;
 	        		case 3:
-
-		        		if(g!=null){
-
-		        				System.out.println("\n"+g.sayGoodMorning()+"\n");
-		        			}else{
-		        				System.out.println("Please choose the first option before this.");
-		        			}
+	        		System.out.println("Gracias por utilizar el software, hasta pronto.");
 	        		break;
-	        		case 4:
-		        		if(g!=null){
 
-			        			System.out.println("\n"+g.sayGoodBye()+"\n");
-			        		}else{
-			        			System.out.println("Please choose the first option before this.");
-			        		}
-	        		break;
-	        		case 5:
-	        		System.out.println("\n"+"Thanks for using the software! Bye Bye motherfucker!!"+"\n");
-	        		break;
-	        	}*/
-}
+	        	}
+
+ 		}while(option!=3);
+
+
+  	}
+
 
 }
 
